@@ -1,4 +1,5 @@
 # ref: https://gitlab.com/semen4ik20/mentoring-august/-/blob/master/.gitlab-ci.yml
+# https://gist.github.com/RyanHarijanto/217d62534260fd2ee63278b3c293cd10
 image: ubuntu:16.04
 
 stages:
@@ -9,6 +10,7 @@ default:
   before_script:
     - apt-get update -y
     - apt install curl zip unzip -y
+    - apt install chromium-browser
     - curl -s "https://get.sdkman.io" | bash
     - source "$HOME/.sdkman/bin/sdkman-init.sh"
     - sdk version
