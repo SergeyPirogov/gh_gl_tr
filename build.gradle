@@ -23,3 +23,15 @@ allure {
         version = '2.13.3'
     }
 }
+
+test {
+    systemProperties System.getProperties()
+
+    testLogging {
+        showStandardStreams = true
+        events "PASSED", "FAILED"
+        exceptionFormat = "full"
+    }
+
+    test.outputs.upToDateWhen { false }
+}
