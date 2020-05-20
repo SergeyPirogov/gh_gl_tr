@@ -8,7 +8,7 @@ stages:
 default:
   before_script:
     - apt-get update -y
-    - apt install curl -y
+    - apt install curl unzip -y
     - curl -s "https://get.sdkman.io" | bash
     - sdk version
 
