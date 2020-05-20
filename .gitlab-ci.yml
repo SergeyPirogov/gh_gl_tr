@@ -1,9 +1,14 @@
 # ref: https://gitlab.com/semen4ik20/mentoring-august/-/blob/master/.gitlab-ci.yml
-image: spirogov/gitlab
+image: ubuntu:16.04
 
 stages:
   - build
   - tests
+
+default:
+  before_script:
+    - curl -s "https://get.sdkman.io" | bash
+    - sdk version
 
 build:
   stage: build
