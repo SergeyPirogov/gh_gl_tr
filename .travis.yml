@@ -15,6 +15,8 @@ jdk:
 
 before_install:
   - chmod +x gradlew
+  - curl -s https://aerokube.com/cm/bash | bash \
+    && ./cm selenoid start --vnc --tmpfs 128
 
 script:
   - ./gradlew clean build
