@@ -1,0 +1,24 @@
+# ref: https://gitlab.com/semen4ik20/mentoring-august/-/blob/master/.gitlab-ci.yml
+image: openjdk:11.0.7-jdk-slim
+
+stages:
+  - build
+  - tests
+
+build:
+  stage: build
+  #  only:
+  #  - master
+  script:
+    - ./gradlew clean assemble
+
+api-tests:
+  stage: tests
+  #  only:
+  #  - master
+  script:
+    - ./gradlew test allureReport
+  artifacts:
+    name: "gradle report"
+    paths:
+      - ./build/reports/allure-report/
