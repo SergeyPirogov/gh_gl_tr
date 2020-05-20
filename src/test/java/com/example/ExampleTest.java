@@ -15,9 +15,12 @@ public class ExampleTest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        Configuration.headless = true;
+//        Configuration.headless = true;
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+
         Configuration.browserCapabilities = new DesiredCapabilities(options);
 //        Configuration.remote = "http://localhost:4444/wd/hub";
     }
