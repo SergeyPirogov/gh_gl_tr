@@ -13,8 +13,8 @@ public class ExampleTest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-//        Configuration.headless = true;
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.headless = true;
+//        Configuration.remote = "http://localhost:4444/wd/hub";
     }
 
     @Test
