@@ -18,8 +18,8 @@ build:
   stage: build
   #  only:
   #  - master
-#  before_script:
-#    - sdk install java
+  before_script:
+    - sdk install java 11.0.7-open
   script:
     - ./gradlew clean assemble
 
