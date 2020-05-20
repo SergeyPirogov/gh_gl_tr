@@ -10,7 +10,7 @@ default:
   before_script:
     - apt-get update -y
     - apt install curl zip unzip -y
-    - apt install chromium-browser -y
+    - apt install google-chrome-stable -y
     - curl -s "https://get.sdkman.io" | bash
     - source "$HOME/.sdkman/bin/sdkman-init.sh"
     - sdk version
