@@ -6,6 +6,8 @@ import com.codeborne.selenide.Selenide;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -14,6 +16,9 @@ public class ExampleTest {
     @BeforeClass
     public static void setUp() throws Exception {
         Configuration.headless = true;
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        Configuration.browserCapabilities = new DesiredCapabilities(options);
 //        Configuration.remote = "http://localhost:4444/wd/hub";
     }
 
