@@ -15,6 +15,7 @@ jdk:
 
 before_install:
   - chmod +x gradlew
+  - chmod +x ./.upload_repors.sh
   - curl -s https://aerokube.com/cm/bash | bash && ./cm selenoid start --vnc --tmpfs 128
 
 script:
