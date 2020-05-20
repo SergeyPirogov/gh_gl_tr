@@ -10,6 +10,7 @@ default:
     - apt-get update -y
     - apt install curl zip unzip -y
     - curl -s "https://get.sdkman.io" | bash
+    - source "$HOME/.sdkman/bin/sdkman-init.sh"
     - sdk version
 
 build:
