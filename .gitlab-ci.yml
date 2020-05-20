@@ -23,8 +23,8 @@ api-tests:
   stage: tests
   #  only:
   #  - master
-  before_script:
-    -
+#  before_script:
+
   script:
     - ./gradlew test allureReport
   artifacts:
