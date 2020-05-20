@@ -18,4 +18,6 @@ before_install:
   - curl -s https://aerokube.com/cm/bash | bash && ./cm selenoid start --vnc --tmpfs 128
 
 script:
-  - ./gradlew clean build
+  - ./gradlew clean build allureReport
+
+after_script: "./.upload_reports.sh"
