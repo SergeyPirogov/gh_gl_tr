@@ -29,7 +29,7 @@ build:
   #  - master
   before_script:
 #    - sdk install java 11.0.7-open
-    - export JAVA_HOME="/root/.sdkman/candidates/java/11.0.7-open"
+    #- export JAVA_HOME="/root/.sdkman/candidates/java/11.0.7-open"
   script:
     - ./gradlew clean assemble
 
