@@ -8,8 +8,8 @@ stages:
   - build
   - tests
 
-#default:
-#  before_script:
+default:
+  before_script:
 #    - apt-get update -y
 #    - apt install curl zip unzip wget -y
 #    - wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
@@ -20,7 +20,7 @@ stages:
 #    - source "$HOME/.sdkman/bin/sdkman-init.sh"
 #    - sdk version
 #    - sdk ls java
-#    - sdk install java 11.0.7-open
+    - sdk install java 11.0.7-open
 
 build:
   stage: build
