@@ -20,15 +20,15 @@ default:
 #    - source "$HOME/.sdkman/bin/sdkman-init.sh"
 #    - sdk version
 #    - sdk ls java
-    - sdk install java 11.0.7-open
+#    - sdk install java 11.0.7-open
 
 build:
   stage: build
   tags:
     - home
   #  - master
-#  before_script:
-#    - sdk install java 11.0.7-open
+  before_script:
+    - sdk install java 11.0.7-open
   script:
     - ./gradlew clean assemble
 
