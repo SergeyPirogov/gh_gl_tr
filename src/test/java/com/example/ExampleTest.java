@@ -16,7 +16,6 @@ public class ExampleTest {
     @BeforeClass
     public static void setUp() throws Exception {
 //        Configuration.headless = true;
-
 //          Configuration.browser = "com.example.WebdriverManager";
 //        Configuration.browserCapabilities = new DesiredCapabilities(options);
         Configuration.remote = "http://localhost:4444/wd/hub";
