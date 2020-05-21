@@ -1,6 +1,7 @@
 # ref: https://gitlab.com/semen4ik20/mentoring-august/-/blob/master/.gitlab-ci.yml
 # https://gist.github.com/RyanHarijanto/217d62534260fd2ee63278b3c293cd10
 # https://stackoverflow.com/questions/50642308/webdriverexception-unknown-error-devtoolsactiveport-file-doesnt-exist-while-t
+# https://docs.gitlab.com/runner/install/linux-repository.html
 image: ubuntu:16.04
 
 stages:
@@ -23,7 +24,8 @@ default:
 
 build:
   stage: build
-  #  only:
+  tags:
+    - home
   #  - master
 #  before_script:
 #    - sdk install java 11.0.7-open
@@ -32,6 +34,8 @@ build:
 
 api-tests:
   stage: tests
+  tags:
+    - home
   #  only:
   #  - master
 #  before_script:
