@@ -3,17 +3,15 @@ package com.example;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class ExampleTest {
 
-    @BeforeClass
+    @BeforeAll
     public static void setUp() throws Exception {
 //        Configuration.headless = true;
 //          Configuration.browser = "com.example.WebdriverManager";
@@ -22,7 +20,7 @@ public class ExampleTest {
     }
 
     @Test
-    public void name() {
+    public void test() {
         Selenide.open("https://angular.realworld.io/");
         $("body > app-root > app-layout-header > nav > div > ul > li:nth-child(2) > a").shouldHave(Condition.text("Sign in"));
     }

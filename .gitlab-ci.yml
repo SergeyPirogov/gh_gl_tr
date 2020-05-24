@@ -2,6 +2,9 @@
 # https://gist.github.com/RyanHarijanto/217d62534260fd2ee63278b3c293cd10
 # https://stackoverflow.com/questions/50642308/webdriverexception-unknown-error-devtoolsactiveport-file-doesnt-exist-while-t
 # https://docs.gitlab.com/runner/install/linux-repository.html
+# https://vitux.com/how-to-setup-java_home-path-in-ubuntu/
+# https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04-ru
+# https://medium.com/faun/gitlab-pipeline-to-run-cross-multiple-projects-3563af5d6dca
 image: ubuntu:16.04
 
 stages:

@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     compile group: 'com.codeborne', name: 'selenide', version: '5.11.1'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.6.2')
 }
 
 allure {
@@ -25,6 +25,7 @@ allure {
 }
 
 test {
+    useJUnitPlatform()
     systemProperties System.getProperties()
 
     testLogging {
